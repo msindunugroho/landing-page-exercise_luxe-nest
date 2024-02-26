@@ -66,4 +66,49 @@ section#carousel .carousel_img-container {
   width: 50%;
   height: 100%;
   overflow: hidden;
+  position: relative;
+}
+section#carousel .carousel_img-container .slide-img {
+  display: none;
+}
+section#carousel .carousel_img-container .slide-img img {
+  height: 100%;
+}
+section#carousel .carousel_img-container .slide-img .caption {
+  font-size: 3vw;
+  z-index: 2;
+  font-weight: bold;
+  padding: 0 30px;
+  color: var(--third-col);
+  position: absolute;
+  bottom: 50%;
+}
+section#carousel .carousel_img-container .doted-container {
+  width: 100%;
+  padding: 15px 0;
+  /* z-index: 3; */
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+
+}
+section#carousel .carousel_img-container .doted-container span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0px 10px;
+  border-radius: 50%;
+  background: var(--third-col);  
+}
+section#carousel .carousel_img-container .doted-container span:hover {
+  background-color: #5f442e;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s ease;
+}
+
+@keyframes fade {
+  from {opacity: .4;}
+  to {opacity: 1;}
 }
