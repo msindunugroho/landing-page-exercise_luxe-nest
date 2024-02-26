@@ -62,11 +62,8 @@ section#carousel .carousel_desc .card_provide .card .count_desc {
   font-weight: 400;
 }
 /* carousel_img */
-section#carousel .carousel_img {
+section#carousel .carousel_img-container {
   width: 50%;
   height: 100%;
   overflow: hidden;
-}
-section#carousel .carousel_img img {
-  width: max-content;
 }
