@@ -1,0 +1,77 @@
+footer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    place-content: center;
+    align-items: center;
+}
+footer > header, 
+footer > section#footer_body {
+    padding: 6vw 10vw;
+    width: 100%;
+}
+/* header */
+footer > header {
+    background: var(--fivth-col);
+    display: flex;
+    flex-flow: row;
+    place-content: center space-around;
+    align-items: center;
+}
+footer > header h2 {
+    font-size: 2vw;
+    font-weight: 600;
+}
+/* body */
+footer section#footer_body {
+    height: 100%;
+    background: var(--first-col);
+    display: flex;
+    flex-flow: column;
+    place-content: center;
+    align-items: center;
+    gap: 6vw;
+}
+footer section#footer_body nav {
+    width: 100%;
+    border-bottom: 1px solid var(--second-col);
+    padding-bottom: 4vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+footer section#footer_body nav #nav_bar {
+    place-content: center end;
+}
+footer section#footer_body section#domicile {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    gap: 10vw;
+}
+footer section#footer_body section#domicile p {
+    color: var(--text-col);
+}
+footer section#footer_body section#social-media {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    gap: 1.5vw;
+}
+footer section#footer_body section#social-media .social-media_icon{
+    width: 2.8vw;
+    height: 2.8vw;
+    border-radius: 50%;
+    background: var(--third-col);
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+footer section#footer_body section#social-media .social-media_icon svg {
+    width: 1.9vw;
+    height: 1.9vw;
+    fill: var(--first-col);
+} 

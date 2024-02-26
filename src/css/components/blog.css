@@ -1,0 +1,63 @@
+article#blog {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    place-content: center;
+    align-items: center;
+    gap: 30px 0px;
+}
+article#blog .blog_body {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    place-content: center;
+    align-items: flex-start;
+    gap: 0px 2.2vw;
+}
+article#blog .blog_body .card {
+    width: 21vw;
+    height: 55vh;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+article#blog .blog_body .card:nth-child(2) {
+    transform: scale(1.1) translateY(20px);
+}
+article#blog .blog_body .card img {
+    width: 100%;
+}
+article#blog .blog_body .card .card_type-date {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-flow: row;
+    place-content: center space-evenly;
+    align-items: center;
+}
+article#blog .blog_body .card .card_type-date h4 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    font-weight: light;
+    position: relative;
+}
+article#blog .blog_body .card .card_type-date h4::before {
+    content: "";
+    width: 17px;
+    height: 2px;
+    background-color: var(--first-col);
+    position: absolute;
+    top: 48%;
+    left: -20px;
+}
+article#blog .blog_body .card .card_type-date ul {
+    margin-right: -20px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0px 25px;
+    font-size: 1vw;
+}

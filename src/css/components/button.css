@@ -1,0 +1,10 @@
+a.button {
+    width: fit-content;
+    font-size: 1vw;
+    text-transform: capitalize;
+    color: var(--text-col);
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 3px;
+    background: var(--third-col);
+  }

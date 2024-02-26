@@ -1,0 +1,9 @@
+p.sub_title {
+    text-transform: uppercase;
+      font-weight: light;
+  }
+  h2.sub_title {
+    font-size: 3vw;
+      font-weight: light;
+      color: var(--second-col);
+  }

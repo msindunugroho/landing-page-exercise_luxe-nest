@@ -1,0 +1,72 @@
+section#carousel {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  background: var(--first-col);
+}
+/* carousel_desc */
+section#carousel .carousel_desc {
+  width: 50%;
+  height: 100%;
+  padding: 0px 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  place-content: center;
+  align-items: center;
+}
+section#carousel .carousel_desc h2 {
+  font-size: 3.3vw;
+  font-weight: 800;
+  color: var(--text-col);
+}
+section#carousel .carousel_desc h2 span {
+  display: inline-block;
+  background: var(--first-col) url("./../../img/_856ed289-04e0-41fd-8fe8-abc8cbec78ce.jfif") center/cover ;
+  width: 12vw;
+  height: 47px;
+  border-radius: 30px;
+}
+section#carousel .carousel_desc p {
+  color: var(--text-col);
+  font-weight: lighter;
+}
+section#carousel .carousel_desc a {
+  display: flex;
+  align-self: flex-start;
+  margin: 30px 0px;
+}
+section#carousel .carousel_desc .card_provide {
+  width: 100%;
+  height: max-content;
+  margin-top: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0px 20px;
+}
+section#carousel .carousel_desc .card_provide .card {
+  display: flex;
+  flex-flow: column;
+  place-content: center;
+  align-items: center;
+  flex: 1;
+}
+section#carousel .carousel_desc .card_provide .card .count {
+  color: var(--text-col);
+  font-weight: 700;
+  font-size: 2.8vw;
+}
+section#carousel .carousel_desc .card_provide .card .count_desc {
+  color: var(--text-col);
+  font-size: 1vw;
+  font-weight: 400;
+}
+/* carousel_img */
+section#carousel .carousel_img {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+section#carousel .carousel_img img {
+  width: max-content;
+}

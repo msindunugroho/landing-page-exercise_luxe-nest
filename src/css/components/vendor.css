@@ -1,0 +1,134 @@
+/* 
+1. TimberTech
+2. Masterful
+3. Heritage
+4. Möbel
+5. Éco-Bois
+
+*/
+article#vendor {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-flow: column;
+  padding: 100px;
+  gap: 100px 0px;
+  background: var(--first-col);
+  position: relative;
+}
+article#vendor .bloop {
+    width: 360px;
+    height: 360px;
+    position: absolute;
+    z-index: -1;
+    opacity: .1;
+    background: var(--fivth-col);
+}
+article#vendor .bloop:nth-child(1) {
+    border-radius: 71% 29% 54% 46% / 34% 43% 57% 66% ;
+    top: 7vw;
+    left: 6vw;
+    animation: 
+        firstBloop 7s linear infinite alternate,
+        bloopRotate 7s linear infinite;
+}
+article#vendor .bloop:nth-child(2) {
+    border-radius: 74% 26% 33% 67% / 36% 72% 28% 64%  ;
+    right: 5vw;
+    bottom: 10vw;
+    animation: 
+        secondBloop 7s linear infinite alternate,
+        bloopRotate 7s linear infinite;
+}
+article#vendor .vendor_logo-img {
+    width: 100%;
+    height: 200px;
+    height: max-content;
+    display: flex;
+    flex-flow: row nowrap;
+    place-content: center space-around;
+    align-items: center;
+}
+article#vendor .vendor_logo-img img {
+    width: 15%;
+    filter: grayscale(1);
+}
+article#vendor .vendor_logo-img img:hover {
+    filter: grayscale(0);
+
+}
+article#vendor .vendor_body {
+    display: flex;
+    flex-flow: row nowrap;
+    place-content: center;
+    align-items: center;
+    gap: 0px 50px;
+}
+article#vendor .vendor_body .vendor_person-img{
+    width: 50%;
+    height: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template: repeat(2, minmax(1.2vw, 1fr)) / repeat(1.2vw, 1fr);
+}
+article#vendor .vendor_body .vendor_person-img img {
+    width: 100%;
+}
+article#vendor .vendor_body .vendor_person-img img:nth-child(1) {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+article#vendor .vendor_body .vendor_person-img img:nth-child(2) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+article#vendor .vendor_body .vendor_person-img img:nth-child(3) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+article#vendor .vendor_body .vendor_person-img img:nth-child(4) {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+article#vendor .vendor_body .vendor_desc {
+    width: 50%;
+    color: var(--text-col);
+    display: flex;
+    flex-flow: column nowrap;
+}
+article#vendor .vendor_body .vendor_desc h2.sub_title {
+    color: var(--text-col);
+}
+
+@keyframes firstBloop {
+    0% {
+        border-radius: 71% 29% 54% 46% / 34% 43% 57% 66% ;
+    }
+    50% {
+        border-radius: 38% 62% 62% 38% / 49% 55% 45% 51% ;
+    }
+    100% {
+        border-radius: 63% 37% 42% 58% / 20% 66% 34% 80% ;
+    }
+}
+
+@keyframes secondBloop {
+    0% {
+        border-radius: 74% 26% 33% 67% / 36% 72% 28% 64%  ;
+    }
+    50% {
+        border-radius: 60% 40% 49% 51% / 50% 58% 42% 50%  ;
+    }
+    100% {
+        border-radius: 23% 77% 30% 70% / 63% 51% 49% 37%  ;
+    }
+}
+
+@keyframes bloopRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

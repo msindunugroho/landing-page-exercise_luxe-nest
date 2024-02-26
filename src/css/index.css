@@ -1,0 +1,34 @@
+@import url("./components/button.css");
+@import url("./components/utils_style.css");
+@import url("./components/navigation.css");
+@import url("./components/main.css");
+@import url("./components/carousel.css");
+@import url("./components/production.css");
+@import url("./components/furniture.css");
+@import url("./components/vendor.css");
+@import url("./components/blog.css");
+@import url("./components/footer.css");
+
+:root {
+  --first-col: #3d2315;
+  --second-col: #60270f;
+  --third-col: #a0724d;
+  --fourth-col: #c3b8a9;
+  --fivth-col: #e3d8c5;
+  --sixth-col: white;
+  --text-col: whitesmoke;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+}
