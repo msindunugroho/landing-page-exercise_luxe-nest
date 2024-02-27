@@ -71,6 +71,13 @@ section#carousel .carousel_img-container {
 section#carousel .carousel_img-container .slide-img {
   display: none;
 }
+section#carousel .carousel_img-container .slide-img p {
+  position: absolute;
+  top: 0;
+  padding: 10px 0 0 10px;
+  color: red;
+  font-size: 40px;
+}
 section#carousel .carousel_img-container .slide-img img {
   height: 100%;
 }
@@ -82,6 +89,8 @@ section#carousel .carousel_img-container .slide-img .caption {
   color: var(--third-col);
   position: absolute;
   bottom: 50%;
+  text-shadow: 1px 1px 1px var(--fivth-col);
+  transform: translate(-30px);
 }
 section#carousel .carousel_img-container .doted-container {
   width: 100%;
@@ -105,10 +114,20 @@ section#carousel .carousel_img-container .doted-container span:hover {
 }
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s ease;
+  animation-duration: 2s;
+}
+.translateHorizon {
+  animation-name: translateHorizon;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fade {
   from {opacity: .4;}
   to {opacity: 1;}
+}
+@keyframes translateHorizon {
+  from {  transform: translate(-30px);}
+  to {  transform: translate(0px);}
 }

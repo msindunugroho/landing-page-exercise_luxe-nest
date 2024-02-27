@@ -1,7 +1,9 @@
 import { button } from "./components/button.js";
+import { carouselSlide } from "./components/carousel-slide.js";
+import { carouselCircle } from "./components/carouselCircle.js";
 
-const RUN = () => {
-    button()
-}
-
-RUN();
+document.addEventListener('DOMContentLoaded', () => {
+    button();
+    carouselSlide();
+    carouselCircle();
+})
