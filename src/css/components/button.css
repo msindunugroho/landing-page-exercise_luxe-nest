@@ -1,10 +1,38 @@
-a.button {
-    width: fit-content;
-    font-size: 1vw;
-    text-transform: capitalize;
-    color: var(--text-col);
-    text-decoration: none;
-    padding: 13px 30px;
-    border-radius: 3px;
-    background: var(--third-col);
-  }
+.button {
+  display: flex;
+  align-self: flex-start;
+  background: var(--third-col);
+  padding: .5rem 1.5rem;
+  border-radius: .3rem;
+  text-decoration: none;
+  color: var(--first-col);
+}
+.button:hover {
+  background: var(--first-col);
+  color: var(--fivth-col);
+  outline: 2px solid var(--third-col);
+}
+.about,
+.contact {
+  position: relative;
+}
+.about::after {
+  content: "about";
+}
+.contact::after {
+  content: "contact";
+}
+
+/* transform before observe */
+.button {
+  opacity: 0;
+  transform: scale(.5);
+  transition-property: opacity, transform;
+  transition: var(--transition);
+  transition-delay: var(--delay-4);
+}
+/* transform at observing */
+.show-button {
+  opacity: 1;
+  transform: scale(1);
+}

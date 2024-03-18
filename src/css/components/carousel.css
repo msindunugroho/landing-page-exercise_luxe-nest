@@ -15,7 +15,7 @@ section#carousel .carousel_desc {
   place-content: center;
   align-items: center;
 }
-section#carousel .carousel_desc h2 {
+section#carousel .carousel_desc .carousel_heading {
   font-size: 3.3vw;
   font-weight: 800;
   color: var(--text-col);
@@ -27,15 +27,30 @@ section#carousel .carousel_desc h2 span {
   height: 47px;
   border-radius: 30px;
 }
-section#carousel .carousel_desc p {
+section#carousel .carousel_desc .carousel_par{
   color: var(--text-col);
   font-weight: lighter;
+  transition-delay: var(--delay-2);
 }
-section#carousel .carousel_desc a {
-  display: flex;
-  align-self: flex-start;
+section#carousel .carousel_desc .btn{
   margin: 30px 0px;
+  transition-delay: var(--delay-3);
 }
+
+/* transform before observe */
+.carousel_heading,
+.carousel_par {
+  transition: var(--transition);
+  transform: translate(-150px) scale(.9);
+  opacity: .01;
+}
+/* transform at observing */
+.transform_carousel-desc {
+  transform: translate(0px) scale(1);
+  opacity: 1;
+}
+
+
 section#carousel .carousel_desc .card_provide {
   width: 100%;
   height: max-content;
@@ -70,13 +85,6 @@ section#carousel .carousel_img-container {
 }
 section#carousel .carousel_img-container .slide-img {
   display: none;
-}
-section#carousel .carousel_img-container .slide-img p {
-  position: absolute;
-  top: 0;
-  padding: 10px 0 0 10px;
-  color: red;
-  font-size: 40px;
 }
 section#carousel .carousel_img-container .slide-img img {
   height: 100%;
