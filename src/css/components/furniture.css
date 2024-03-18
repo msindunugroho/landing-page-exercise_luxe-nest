@@ -19,8 +19,16 @@ article#furniture .furniture_product .product_header {
     display: flex;
     flex-flow: row;
     align-items: center;
-
+    transition: var(--transition);
+    transform: var(--translate-start-top);
+    transition-delay: var(--delay-2);
+    opacity: 0;
 }
+article#furniture .furniture_product .product_header.transform_product_header {
+    transform: var(--translateY-end);
+    opacity: 1;
+}
+
 article#furniture .furniture_product .product_header .title {
     flex: .8;
 }
@@ -55,7 +63,7 @@ article#furniture .furniture_product .product_body {
     grid-template: repeat(2, minmax(17vw, 1fr))/ repeat(4, minmax(12vw, 1fr));
     gap: 30px;
 }
-article#furniture .furniture_product .product_body .card {
+article#furniture .furniture_product .product_body .card_product-body {
     background:var(--sixth-col);
     border-radius: 10px;
     color: var(--first-col);
@@ -65,18 +73,27 @@ article#furniture .furniture_product .product_body .card {
     flex-flow: column;
     place-content: center;
     align-items: center;
+    transition: var(--transition);
+    transform: rotateY(90deg) var(--translate-start-left);
+    opacity: 0;
 }
-article#furniture .furniture_product .product_body .card svg {
+
+/* intersection observer */
+article#furniture .furniture_product .product_body .card_product-body.transform_card-product-body {
+    transform: rotateY(0deg) var(--translate-end);
+    opacity: 1;
+}
+article#furniture .furniture_product .product_body .card_product-body svg {
     width: 7vw;
     fill: var(--third-col);
     /* height: 70px; */
 }
-article#furniture .furniture_product .product_body .card p {
+article#furniture .furniture_product .product_body .card_product-body p {
     font-size: 1.3vw;
     font-weight: 500;
     text-transform: capitalize;
 }
-article#furniture .furniture_product .product_body .card .card_navigation {
+article#furniture .furniture_product .product_body .card_product-body .card_navigation {
     width: 100%;
     height: max-content;
     display: flex;
@@ -85,7 +102,7 @@ article#furniture .furniture_product .product_body .card .card_navigation {
     align-items: center;
     gap: 0px 5px;
 }
-article#furniture .furniture_product .product_body .card .card_navigation span {
+article#furniture .furniture_product .product_body .card_product-body .card_navigation span {
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -96,8 +113,17 @@ article#furniture .furniture_images {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
 }
-article#furniture .furniture_images img {
+article#furniture .furniture_images img.furniture-img-item {
     width: 100%;
+    transition: var(--transition);
+    transform: var(--scale-start-7);
+    opacity: 0;
+}
+
+/* intersection observer */
+article#furniture .furniture_images img.furniture-img-item.transform_furniture-img-item {
+    transform: var(--scale-end);
+    opacity: 1;
 }
 article#furniture .furniture_images img:nth-child(1){
     grid-row: 1 / 3;

@@ -42,12 +42,12 @@ section#carousel .carousel_desc .btn{
 .carousel_par,
 .card_count{
   transition: var(--transition);
-  transform: translate(-150px) scale(.9);
-  opacity: .01;
+  transform: var(--translate-start-left) var(--scale-start-7);
+  opacity: 0;
 }
 /* transform at observing */
 .transform_carousel-desc {
-  transform: translate(0px) scale(1);
+  transform: var(--translate-end) var(--scale-end);
   opacity: 1;
 }
 
@@ -61,6 +61,7 @@ section#carousel .carousel_desc .card_provide {
   gap: 0px 20px;
 }
 /* transition-delay */
+section#carousel .carousel_desc .card_provide .card_count {transition-property: opacity, transform;}
 section#carousel .carousel_desc .card_provide .card_count:nth-child(1){transition-delay: var(--delay-1);}
 section#carousel .carousel_desc .card_provide .card_count:nth-child(2){transition-delay: var(--delay-2);}
 section#carousel .carousel_desc .card_provide .card_count:nth-child(3){transition-delay: var(--delay-3);}

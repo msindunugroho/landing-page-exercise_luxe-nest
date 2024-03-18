@@ -17,8 +17,22 @@
   --fivth-col: #e3d8c5;
   --sixth-col: white;
   --text-col: whitesmoke;
+  /* translate */
+  --translate-start-left: translate(-150px);
+  --translate-start-right: translate(150px);
+  --translate-start-top: translateY(-150px);
+  --translate-start-bottom: translateY(150px);
+  --translate-end: translate(0px);
+  --translate-endY: translateY(0px);
+  /* scale */
+  --scale-start-5: scale(.5);
+  --scale-start-7: scale(.7);
+  --scale-start-9: scale(.9);
+  --scale-end: scale(1);
+  /* transition */
   --transition: .9s ease-out;
   --transition-cub: .9s cubic-bezier(0, 1.08, 1, 1.38);
+/* transition delay */
   --delay-1: 0s;
   --delay-2: .3s;
   --delay-3: .6s;

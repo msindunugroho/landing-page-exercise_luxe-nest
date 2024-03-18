@@ -33,7 +33,22 @@ article#production .production_img p {
     right: -20px;
     display: flex;
     align-items: center;
+    transition-delay: var(--delay-2);
 }
+
+/* transform before observe */
+.production-image,
+.production-image-title {
+    transition: var(--transition);
+    transform: var(--scale-start-5);
+    opacity: .5;
+}
+/* transition at observing */
+.transform_production-img{
+    transform: var(--scale-end);
+    opacity: 1;
+}
+
 article#production .production_desc {
     display: flex;
     flex-flow: column nowrap;
@@ -45,7 +60,31 @@ article#production .production_desc {
 article#production .production_desc p, h2, ol {
     margin: 0;
 }
-article#production .production_desc ol {
+
+/* transform before observe */
+.production_desc p:nth-child(1) {
+    transition-delay: var(--delay-1);
+}
+.production_desc h2 {
+    transition-delay: var(--delay-2);
+}
+.production_desc p:nth-child(3) {
+    transition-delay: var(--delay-3);
+}
+.product-desc-p1,
+.product-desc-h2,
+.product-desc-p2 {
+    transition: var(--transition);
+    transform: var(--translate-start-left);
+    opacity: 0;
+}
+.transform_production-desc {
+    transform: var(--translate-end);
+    opacity: 1;
+}
+
+article#production .production_desc ol.production_desc-list{
+    width: 0;
     list-style-type: decimal-leading-zero;
     color: var(--first-col);
     font-size: 1.5vw;
@@ -53,8 +92,13 @@ article#production .production_desc ol {
     text-indent: 15px;
     margin-left: 40px;
     position: relative;
+    transition: var(--transition);
 }
-article#production .production_desc ol::before {
+/* intersection observer */
+article#production .production_desc ol.production_desc-list.transform_production-desc-list{
+    width: 265px;
+}
+article#production .production_desc ol.production_desc-list::before {
     content: "";
     width: 200%;
     height: .1px;
@@ -63,12 +107,22 @@ article#production .production_desc ol::before {
     top: 54%;
     left: -40px;
 }
-article#production .production_desc ol li {
+article#production .production_desc ol li.production-list-item {
     padding: 10px 0px;
+    transition: var(--transition);
+    transform: var(--translate-start-left);
+    animation-delay: var(--delay-3);
+    opacity: 0;
 }
 article#production .production_desc ol p {
+    width: max-content;
     font-size: 1.3vw;
     font-weight: bold;
     text-transform: capitalize;
     color: var(--third-col);
+}
+/* intersection observer */
+article#production .production_desc ol li.production-list-item.transform_production-list-item {
+    opacity: 1;
+    transform: var(--translate-end);
 }
